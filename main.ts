@@ -1,15 +1,12 @@
-ESP8266_IoT.connectWifi("Testing", "123456789")
-OLED.init(128, 64)
-for (let index = 0; index < 4; index++) {
-	
-}
-dht11_dht22.queryData(
-DHTtype.DHT11,
-DigitalPin.P3,
-true,
-false,
-true
-)
+input.onButtonPressed(Button.A, function () {
+    led.setBrightness(255)
+})
+input.onButtonPressed(Button.B, function () {
+    led.setBrightness(185)
+})
+basic.showString("one")
+basic.pause(100)
+basic.clearScreen()
 basic.forever(function () {
-    basic.showString("")
+    basic.showIcon(IconNames.Heart)
 })
